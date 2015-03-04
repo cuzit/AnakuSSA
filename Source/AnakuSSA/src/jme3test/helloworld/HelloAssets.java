@@ -1,6 +1,7 @@
 package jme3test.helloworld;
 
 import com.jme3.app.SimpleApplication;
+import com.jme3.asset.plugins.ZipLocator;
 import com.jme3.font.BitmapText;
 import com.jme3.light.DirectionalLight;
 import com.jme3.material.Material;
@@ -51,9 +52,19 @@ public class HelloAssets extends SimpleApplication {
           helloText.setLocalTranslation(300, helloText.getLineHeight(), 0);
           guiNode.attachChild(helloText);
           
-          //Load the town scene for funs and experiments and testing and good old fashioned learning.
+          /*//Load the town scene for funs and experiments and testing and good old fashioned learning.
           assetManager.registerLocator("town.zip", ZipLocator.class);
           Spatial gameLevel = assetManager.loadModel("main.scene");
+          gameLevel.setLocalTranslation(0, -5.2f, 0);
+          gameLevel.setLocalScale(2);
+          rootNode.attachChild(gameLevel);*/
+          
+          /**Spatial gameLevel = assetManager.loadModel("Scenes/town/main.scene");
+          gameLevel.setLocalTranslation(0, -5.2f, 0);
+          gameLevel.setLocalScale(2);
+          rootNode.attachChild(gameLevel);**/
+          
+          Spatial gameLevel = assetManager.loadModel("Scenes/town/main.j3o");
           gameLevel.setLocalTranslation(0, -5.2f, 0);
           gameLevel.setLocalScale(2);
           rootNode.attachChild(gameLevel);
